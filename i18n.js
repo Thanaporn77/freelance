@@ -102,7 +102,10 @@ window.I18N = {
 "s8649": "response time",
 "s789": "mobile-ready",
 "s7728": "h",
-"me1": "Senior Web Developer · your project lead"
+"me1": "Senior Web Developer · your project lead",
+"rb1": "Resume Builder (free)",
+"rb2": "Build your own resume website · 3 templates · custom colors/fonts",
+"rb3": "Try it now ↗"
 },
 "zh": {
 "k0": "服务",
@@ -207,6 +210,9 @@ window.I18N = {
 "s8649": "内回复",
 "s789": "适配手机",
 "s7728": "小时",
-"me1": "高级网页开发者 · 您的项目负责人"
+"me1": "高级网页开发者 · 您的项目负责人",
+"rb1": "简历网站生成器（免费）",
+"rb2": "自己制作简历网站 · 3 款模板 · 自定义颜色/字体",
+"rb3": "立即试用 ↗"
 }
 };
