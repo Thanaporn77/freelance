@@ -101,7 +101,8 @@ window.I18N = {
 "s92": "projects delivered",
 "s8649": "response time",
 "s789": "mobile-ready",
-"s7728": "h"
+"s7728": "h",
+"me1": "Senior Web Developer · your project lead"
 },
 "zh": {
 "k0": "服务",
@@ -205,6 +206,7 @@ window.I18N = {
 "s92": "已交付项目",
 "s8649": "内回复",
 "s789": "适配手机",
-"s7728": "小时"
+"s7728": "小时",
+"me1": "高级网页开发者 · 您的项目负责人"
 }
 };

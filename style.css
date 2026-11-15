@@ -181,3 +181,9 @@ h1,h2,h3,.logo,.price,.stats b{font-family:var(--display)}
 .i18n-fade{animation:i18nfade .35s ease}
 @keyframes i18nfade{from{opacity:0;filter:blur(4px)}}
 @media (max-width:760px){.lang-switch{margin-left:auto}.nav .btn{margin-left:0}.nav .btn-sm{display:none}}
+
+.me{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid #07110d;box-shadow:0 0 0 2px var(--neon),0 0 26px rgb(52 245 160/.55);animation:halo 3s ease-in-out infinite}
+@keyframes halo{50%{box-shadow:0 0 0 2px var(--cyan),0 0 36px rgb(34 211 238/.55)}}
+.me b{display:block;font-family:var(--display);font-size:1.1rem}
+.me span{display:block;color:var(--muted);font-size:.86rem}
