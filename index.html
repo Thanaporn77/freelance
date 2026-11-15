@@ -3,70 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#05090a">
   <title>Monica Web Studio — รับทำเว็บไซต์ WordPress ดูแลเว็บรายเดือน และระบบสำหรับองค์กร</title>
   <meta name="description" content="รับทำเว็บไซต์ธุรกิจด้วย WordPress ดูแลเว็บรายเดือน และพัฒนาระบบภายในองค์กรด้วย Laravel เชื่อม LINE ได้ ประเมินราคาฟรี">
   <meta property="og:title" content="Monica Web Studio — เว็บไซต์และระบบสำหรับธุรกิจ">
   <meta property="og:description" content="WordPress · ดูแลเว็บรายเดือน · ระบบสำหรับองค์กร">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23166534'/><text x='50%' y='56%' font-family='system-ui' font-size='18' font-weight='700' fill='white' text-anchor='middle' dominant-baseline='middle'>M</text></svg>">
-  <link rel="stylesheet" href="style.css?v=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2305090a'/><text x='50%' y='56%' font-family='system-ui' font-size='18' font-weight='800' fill='%2334f5a0' text-anchor='middle' dominant-baseline='middle'>M</text></svg>">
+  <link rel="stylesheet" href="style.css?v=2">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="script.js?v=1" defer></script>
+  <script src="script.js?v=2" defer></script>
 </head>
 <body>
-  <header class="nav">
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#top" class="logo">Monica<span>Web Studio</span></a>
+      <a href="#top" class="logo"><span class="logo-mark">M</span>Monica<em>Web Studio</em></a>
       <nav class="nav-links" aria-label="เมนูหลัก">
         <a href="#services">บริการ</a>
         <a href="#demos">ผลงานตัวอย่าง</a>
         <a href="#packages">แพ็กเกจ</a>
         <a href="#process">ขั้นตอน</a>
-        <a href="#faq">คำถามที่พบบ่อย</a>
+        <a href="#faq">คำถาม</a>
       </nav>
-      <a href="#contact" class="btn btn-primary btn-sm">ปรึกษาฟรี</a>
+      <a href="#contact" class="btn btn-neon btn-sm magnetic">ปรึกษาฟรี</a>
     </div>
   </header>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span></div>
-      <div class="container hero-inner">
-        <p class="pill reveal">🚀 เว็บไซต์ · ดูแลเว็บ · ระบบองค์กร</p>
-        <h1 class="reveal">เว็บไซต์และระบบสำหรับธุรกิจ<br><span class="grad">พร้อมใช้งาน ดูแลต่อเนื่อง</span></h1>
-        <p class="lead reveal">ทำเว็บ WordPress ที่แก้ข้อมูลเองได้ ดูแลเว็บให้เร็วและปลอดภัยทุกเดือน และพัฒนาระบบภายในองค์กรที่เชื่อมกับ LINE ได้ — โดย Senior Web Developer ที่ดูแลงานเว็บมาแล้วกว่า 20 โปรเจคค่ะ</p>
-        <div class="cta reveal">
-          <a href="#contact" class="btn btn-primary">ขอประเมินราคาฟรี</a>
-          <a href="#demos" class="btn btn-ghost">ดูผลงานตัวอย่าง</a>
+      <canvas id="net" class="net" aria-hidden="true"></canvas>
+      <div class="grid-floor" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill reveal"><span class="live-dot"></span> เปิดรับงานใหม่</p>
+          <h1 class="reveal">เว็บไซต์และระบบ<br>สำหรับธุรกิจ <span class="glitch" data-text="ที่ทำงานแทนคุณ">ที่ทำงานแทนคุณ</span></h1>
+          <p class="lead reveal">ทำเว็บ WordPress ที่แก้ข้อมูลเองได้ ดูแลเว็บให้เร็วและปลอดภัยทุกเดือน และพัฒนาระบบภายในองค์กรที่เชื่อม LINE ได้ — โดย Senior Web Developer ที่ดูแลงานเว็บมาแล้วกว่า 20 โปรเจคค่ะ</p>
+          <div class="cta reveal">
+            <a href="#contact" class="btn btn-neon magnetic">ขอประเมินราคาฟรี <span aria-hidden="true">→</span></a>
+            <a href="#demos" class="btn btn-outline magnetic">ดูผลงานตัวอย่าง</a>
+          </div>
+          <ul class="stats reveal">
+            <li><b data-count="20">0</b><span>+</span><small>โปรเจคที่ส่งมอบ</small></li>
+            <li><b data-count="24">0</b><span>ชม.</span><small>ตอบกลับภายใน</small></li>
+            <li><b data-count="100">0</b><span>%</span><small>รองรับมือถือ</small></li>
+          </ul>
         </div>
-        <ul class="trust reveal">
-          <li>✓ คุยงานง่าย อธิบายเป็นภาษาคน</li>
-          <li>✓ ส่งงานตาม timeline</li>
-          <li>✓ มีบริการดูแลหลังส่งมอบ</li>
-        </ul>
+
+        <div class="terminal reveal tilt" aria-label="ตัวอย่างการทำงาน">
+          <div class="term-top"><span></span><span></span><span></span><em>~/monica-web-studio</em></div>
+          <pre class="term-body" id="term"></pre>
+          <div class="term-glow" aria-hidden="true"></div>
+        </div>
       </div>
+      <a href="#services" class="scroll-hint" aria-label="เลื่อนลง"><span></span></a>
     </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-label="เทคโนโลยีที่ใช้">
+      <div class="marquee-track">
+        <ul><li>WordPress</li><li>WooCommerce</li><li>Laravel</li><li>React</li><li>Next.js</li><li>Node.js</li><li>MySQL</li><li>LINE Messaging API</li><li>PromptPay</li><li>Cloudflare</li><li>Elementor</li><li>Tailwind CSS</li></ul>
+        <ul aria-hidden="true"><li>WordPress</li><li>WooCommerce</li><li>Laravel</li><li>React</li><li>Next.js</li><li>Node.js</li><li>MySQL</li><li>LINE Messaging API</li><li>PromptPay</li><li>Cloudflare</li><li>Elementor</li><li>Tailwind CSS</li></ul>
+      </div>
+    </div>
 
     <!-- SERVICES -->
     <section id="services" class="section container">
-      <p class="kicker reveal">บริการ</p>
+      <p class="kicker reveal">// บริการ</p>
       <h2 class="reveal">เลือกบริการที่เหมาะกับธุรกิจของคุณ</h2>
       <div class="grid3">
-        <article class="svc card reveal">
+        <article class="svc glow-card tilt reveal">
           <span class="svc-ic">🌐</span>
           <h3>สร้างเว็บไซต์ WordPress</h3>
           <p>เว็บองค์กร เว็บธุรกิจบริการ และร้านค้าออนไลน์ แอดมินแก้ข้อความ รูป และสินค้าได้เอง</p>
           <ul class="ticks"><li>รองรับ 2 ภาษา ไทย/อังกฤษ</li><li>Cookie banner ตาม PDPA</li><li>ปุ่ม LINE / PromptPay</li><li>รองรับมือถือทุกขนาด</li></ul>
         </article>
-        <article class="svc card reveal featured">
+        <article class="svc glow-card tilt reveal hot">
           <span class="badge">ยอดนิยม</span>
           <span class="svc-ic">🛡️</span>
           <h3>ดูแลเว็บรายเดือน</h3>
           <p>ไม่ต้องกังวลเรื่องเว็บล่ม เว็บช้า หรือโดนแฮ็ก ดูแลให้ทุกเดือนพร้อมรายงานสรุป</p>
           <ul class="ticks"><li>อัปเดตระบบและปลั๊กอิน</li><li>Backup อัตโนมัติ</li><li>ดูแลความปลอดภัย / ล้างมัลแวร์</li><li>ปรับความเร็ว และแก้งานเล็ก</li></ul>
         </article>
-        <article class="svc card reveal">
+        <article class="svc glow-card tilt reveal">
           <span class="svc-ic">🧩</span>
           <h3>ระบบสำหรับองค์กร</h3>
           <p>ระบบที่ออกแบบตามขั้นตอนงานจริงของบริษัท เลิกใช้กระดาษและไฟล์ Excel กระจัดกระจาย</p>
@@ -77,59 +99,59 @@
 
     <!-- DEMOS -->
     <section id="demos" class="section container">
-      <p class="kicker reveal">ผลงานตัวอย่าง</p>
+      <p class="kicker reveal">// ผลงานตัวอย่าง</p>
       <h2 class="reveal">ลองกดใช้งานเดโม่ได้เลย</h2>
       <p class="sub reveal">เดโม่ทั้งหมดใช้ข้อมูลสมมติ ทดลองกดได้ตามสบายค่ะ</p>
-      <div class="grid3 demos">
-        <article class="demo card reveal" style="--g1:#14532d;--g2:#15803d">
-          <div class="demo-thumb"><span>🏢</span></div>
-          <div class="demo-body"><span class="tag">WordPress</span><h3>เว็บองค์กรสำเร็จรูป</h3><p>2 ภาษา · PDPA · ปุ่ม LINE · แอดมินแก้เองได้</p><span class="soon">กำลังจะเปิดให้ทดลอง</span></div>
+      <div class="grid3">
+        <article class="demo glow-card tilt reveal" style="--h:150">
+          <div class="demo-thumb"><div class="scan"></div><span>🏢</span></div>
+          <div class="demo-body"><span class="tag">WordPress</span><h3>เว็บองค์กรสำเร็จรูป</h3><p>2 ภาษา · PDPA · ปุ่ม LINE · แอดมินแก้เองได้</p><span class="soon"><i></i>กำลังจะเปิดให้ทดลอง</span></div>
         </article>
-        <article class="demo card reveal" style="--g1:#0f766e;--g2:#15803d">
-          <div class="demo-thumb"><span>🛒</span></div>
-          <div class="demo-body"><span class="tag">WooCommerce</span><h3>ร้านค้าออนไลน์</h3><p>รับ PromptPay · ตัวเลือกสินค้า · ค่าส่ง</p><span class="soon">กำลังจะเปิดให้ทดลอง</span></div>
+        <article class="demo glow-card tilt reveal" style="--h:170">
+          <div class="demo-thumb"><div class="scan"></div><span>🛒</span></div>
+          <div class="demo-body"><span class="tag">WooCommerce</span><h3>ร้านค้าออนไลน์</h3><p>รับ PromptPay · ตัวเลือกสินค้า · ค่าส่ง</p><span class="soon"><i></i>กำลังจะเปิดให้ทดลอง</span></div>
         </article>
-        <article class="demo card reveal" style="--g1:#166534;--g2:#4d7c0f">
-          <div class="demo-thumb"><span>⚡</span></div>
-          <div class="demo-body"><span class="tag">ดูแลเว็บ</span><h3>กรณีศึกษา: เว็บเร็วขึ้น</h3><p>คะแนน PageSpeed และเวลาโหลด ก่อน / หลัง</p><span class="soon">กำลังจะเปิดให้ทดลอง</span></div>
+        <article class="demo glow-card tilt reveal" style="--h:130">
+          <div class="demo-thumb"><div class="scan"></div><span>⚡</span></div>
+          <div class="demo-body"><span class="tag">ดูแลเว็บ</span><h3>กรณีศึกษา: เว็บเร็วขึ้น</h3><p>คะแนน PageSpeed และเวลาโหลด ก่อน / หลัง</p><span class="soon"><i></i>กำลังจะเปิดให้ทดลอง</span></div>
         </article>
-        <article class="demo card reveal" style="--g1:#115e59;--g2:#166534">
-          <div class="demo-thumb"><span>📋</span></div>
-          <div class="demo-body"><span class="tag">Laravel</span><h3>ระบบติดตามงานของทีม</h3><p>ใครถืองานอะไร · เหลือกี่วัน · แจ้งเตือน LINE</p><span class="soon">กำลังจะเปิดให้ทดลอง</span></div>
+        <article class="demo glow-card tilt reveal" style="--h:185">
+          <div class="demo-thumb"><div class="scan"></div><span>📋</span></div>
+          <div class="demo-body"><span class="tag">Laravel</span><h3>ระบบติดตามงานของทีม</h3><p>ใครถืองานอะไร · เหลือกี่วัน · แจ้งเตือน LINE</p><span class="soon"><i></i>กำลังจะเปิดให้ทดลอง</span></div>
         </article>
-        <article class="demo card reveal" style="--g1:#14532d;--g2:#0d9488">
-          <div class="demo-thumb"><span>✅</span></div>
-          <div class="demo-body"><span class="tag">Laravel</span><h3>ระบบขออนุมัติ</h3><p>ลางาน · เบิกเงิน · อนุมัติหลายขั้น</p><span class="soon">กำลังจะเปิดให้ทดลอง</span></div>
+        <article class="demo glow-card tilt reveal" style="--h:160">
+          <div class="demo-thumb"><div class="scan"></div><span>✅</span></div>
+          <div class="demo-body"><span class="tag">Laravel</span><h3>ระบบขออนุมัติ</h3><p>ลางาน · เบิกเงิน · อนุมัติหลายขั้น</p><span class="soon"><i></i>กำลังจะเปิดให้ทดลอง</span></div>
         </article>
-        <article class="demo card reveal more">
-          <div class="demo-body"><h3>ต้องการระบบแบบอื่น?</h3><p>เล่าขั้นตอนงานของคุณมาได้เลย เดี๋ยวช่วยออกแบบระบบที่เหมาะให้ค่ะ</p><a href="#contact" class="btn btn-primary btn-sm">คุยไอเดียกัน</a></div>
+        <article class="demo glow-card reveal more">
+          <div class="demo-body"><span class="plus">+</span><h3>ต้องการระบบแบบอื่น?</h3><p>เล่าขั้นตอนงานของคุณมาได้เลย เดี๋ยวช่วยออกแบบระบบที่เหมาะให้ค่ะ</p><a href="#contact" class="btn btn-neon btn-sm magnetic">คุยไอเดียกัน</a></div>
         </article>
       </div>
     </section>
 
     <!-- PACKAGES -->
     <section id="packages" class="section container">
-      <p class="kicker reveal">แพ็กเกจ</p>
+      <p class="kicker reveal">// แพ็กเกจ</p>
       <h2 class="reveal">ราคาชัดเจน ประเมินฟรีก่อนเริ่มงาน</h2>
       <div class="grid3">
-        <article class="pkg card reveal">
+        <article class="pkg glow-card tilt reveal">
           <h3>เว็บธุรกิจเริ่มต้น</h3>
           <p class="price">สอบถามราคา</p>
           <ul class="ticks"><li>สูงสุด 5 หน้า</li><li>รองรับมือถือ</li><li>ฟอร์มติดต่อ + ปุ่ม LINE</li><li>สอนแก้ข้อมูลเอง</li></ul>
-          <a href="#contact" class="btn btn-ghost">ขอใบเสนอราคา</a>
+          <a href="#contact" class="btn btn-outline">ขอใบเสนอราคา</a>
         </article>
-        <article class="pkg card reveal featured">
+        <article class="pkg glow-card tilt reveal hot">
           <span class="badge">แนะนำ</span>
           <h3>เว็บองค์กร 2 ภาษา</h3>
           <p class="price">สอบถามราคา</p>
           <ul class="ticks"><li>ไทย / อังกฤษ</li><li>Cookie banner ตาม PDPA</li><li>หน้าข่าว / บทความ</li><li>ฟรีดูแลเว็บ 1 เดือน</li></ul>
-          <a href="#contact" class="btn btn-primary">ขอใบเสนอราคา</a>
+          <a href="#contact" class="btn btn-neon magnetic">ขอใบเสนอราคา</a>
         </article>
-        <article class="pkg card reveal">
+        <article class="pkg glow-card tilt reveal">
           <h3>ดูแลเว็บรายเดือน</h3>
           <p class="price">สอบถามราคา</p>
           <ul class="ticks"><li>อัปเดต + Backup</li><li>เฝ้าระวังเว็บล่ม</li><li>แก้งานเล็กทุกเดือน</li><li>รายงานสรุปประจำเดือน</li></ul>
-          <a href="#contact" class="btn btn-ghost">สมัครดูแลเว็บ</a>
+          <a href="#contact" class="btn btn-outline">สมัครดูแลเว็บ</a>
         </article>
       </div>
       <p class="note reveal">ระบบสำหรับองค์กรประเมินราคาตามขอบเขตงาน — นัดคุยฟรี 30 นาทีค่ะ</p>
@@ -137,20 +159,20 @@
 
     <!-- PROCESS -->
     <section id="process" class="section container">
-      <p class="kicker reveal">ขั้นตอนการทำงาน</p>
+      <p class="kicker reveal">// ขั้นตอนการทำงาน</p>
       <h2 class="reveal">ทำงานเป็นขั้นตอน รู้ความคืบหน้าตลอด</h2>
-      <ol class="steps">
-        <li class="reveal"><span>1</span><h3>คุยงาน</h3><p>เล่าความต้องการ เป้าหมาย และงบประมาณ</p></li>
-        <li class="reveal"><span>2</span><h3>เสนอราคา</h3><p>สรุปขอบเขตงาน ราคา และ timeline ชัดเจน</p></li>
-        <li class="reveal"><span>3</span><h3>พัฒนา</h3><p>อัปเดตความคืบหน้าให้ดูเป็นระยะ</p></li>
-        <li class="reveal"><span>4</span><h3>ส่งมอบ</h3><p>ทดสอบ ส่งมอบ และสอนใช้งาน</p></li>
-        <li class="reveal"><span>5</span><h3>ดูแลต่อ</h3><p>มีบริการดูแลรายเดือนหลังส่งมอบ</p></li>
+      <ol class="steps" id="steps">
+        <li class="reveal"><span>01</span><h3>คุยงาน</h3><p>เล่าความต้องการ เป้าหมาย และงบประมาณ</p></li>
+        <li class="reveal"><span>02</span><h3>เสนอราคา</h3><p>สรุปขอบเขตงาน ราคา และ timeline ชัดเจน</p></li>
+        <li class="reveal"><span>03</span><h3>พัฒนา</h3><p>อัปเดตความคืบหน้าให้ดูเป็นระยะ</p></li>
+        <li class="reveal"><span>04</span><h3>ส่งมอบ</h3><p>ทดสอบ ส่งมอบ และสอนใช้งาน</p></li>
+        <li class="reveal"><span>05</span><h3>ดูแลต่อ</h3><p>มีบริการดูแลรายเดือนหลังส่งมอบ</p></li>
       </ol>
     </section>
 
     <!-- FAQ -->
     <section id="faq" class="section container narrow">
-      <p class="kicker reveal">คำถามที่พบบ่อย</p>
+      <p class="kicker reveal">// คำถามที่พบบ่อย</p>
       <h2 class="reveal">มีคำถาม? ดูคำตอบได้ที่นี่</h2>
       <div class="faq reveal">
         <details><summary>ทำเว็บใช้เวลากี่วัน?</summary><p>เว็บธุรกิจทั่วไปใช้เวลาประมาณ 1–3 สัปดาห์ ขึ้นอยู่กับจำนวนหน้าและความพร้อมของเนื้อหา ระบบองค์กรจะแจ้ง timeline หลังสรุปขอบเขตงานค่ะ</p></details>
@@ -163,21 +185,23 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section container">
-      <div class="contact card reveal">
-        <div>
+      <div class="contact reveal">
+        <div class="contact-ring" aria-hidden="true"></div>
+        <div class="contact-copy">
+          <p class="kicker">// ติดต่อ</p>
           <h2>เริ่มคุยงานกันได้เลย</h2>
           <p>ปรึกษาฟรี ไม่มีค่าใช้จ่าย ตอบกลับภายใน 24 ชั่วโมงค่ะ</p>
         </div>
         <div class="contact-btns">
-          <a class="cbtn line" href="https://line.me/ti/p/8rLBnOLciE" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/line/white" alt="" width="22" height="22" onerror="this.remove()">แอดไลน์</a>
-          <a class="cbtn" href="tel:+66971351489">📞 097-135-1489</a>
-          <a class="cbtn" href="mailto:thanapornwang0411@gmail.com">✉️ thanapornwang0411@gmail.com</a>
+          <a class="cbtn line magnetic" href="https://line.me/ti/p/8rLBnOLciE" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/line/white" alt="" width="22" height="22" onerror="this.remove()">แอดไลน์</a>
+          <a class="cbtn magnetic" href="tel:+66971351489">📞 097-135-1489</a>
+          <a class="cbtn magnetic" href="mailto:thanapornwang0411@gmail.com">✉️ thanapornwang0411@gmail.com</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer container"><p>© <span id="year"></span> Monica Web Studio</p></footer>
+  <footer class="footer container"><p>© <span id="year"></span> Monica Web Studio · built with ⚡ hand-written code</p></footer>
 
   <a class="float-line" href="https://line.me/ti/p/8rLBnOLciE" target="_blank" rel="noopener" aria-label="แอดไลน์"><img src="https://cdn.simpleicons.org/line/white" alt="" width="28" height="28" onerror="this.replaceWith(document.createTextNode('LINE'))"></a>
 </body>
